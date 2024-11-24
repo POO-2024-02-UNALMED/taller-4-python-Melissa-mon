@@ -26,7 +26,7 @@ class Grupo:
         cls.grado = nombre
 
 if __name__ == "__main__":
-    Asignatura1 = Asignatura("Matematicas")
+    Asignatura1 = Asignatura("Matematicas", "remoto")
     print(Asignatura1)
 
     grupo = Grupo(estudiantes=[], grupo="grupo predeterminado")
