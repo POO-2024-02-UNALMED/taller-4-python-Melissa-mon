@@ -5,10 +5,7 @@ class Grupo:
 
     def __init__(self, estudiantes, grupo="grupo ordinado", asignaturas=None):
         self._grupo = grupo
-        if asignaturas is None:
-            self._asignaturas = []
-        else:
-            self._asignaturas = asignaturas
+        self._asignaturas = asignaturas if asignaturas is not None else []
         self.listadoAlumnos = estudiantes
 
     def listadoAsignaturas(self, kwargs):
@@ -19,7 +16,7 @@ class Grupo:
         if lista is None:
             lista = []
         lista.append(alumno)
-        self.listadoAlumnos = self.listadoAlumnos + lista
+        self.listadoAlumnos.extend(lista)
 
     def __str__(self):
         return f"Grupo de estudiantes: {self._grupo}"
