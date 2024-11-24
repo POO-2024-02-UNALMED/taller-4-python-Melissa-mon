@@ -4,12 +4,11 @@ class Grupo:
     grado = None
 
     def __init__(self, estudiantes=None, grupo="grupo ordinado", asignaturas=None):
-    if estudiantes is None:
-        estudiantes = []
-    self._grupo = grupo
-    self._Asignatura = Asignatura if Asignatura is not None else []
-    self.listadoAlumnos = estudiantes
-
+        if estudiantes is None:
+            estudiantes = []  # Si no se pasa estudiantes, usar una lista vacía.
+        self._grupo = grupo
+        self._asignaturas = asignaturas if asignaturas is not None else []
+        self.listadoAlumnos = estudiantes
 
     def listadoAsignaturas(self, kwargs):
         for nombre, salon in kwargs.items():
@@ -27,6 +26,7 @@ class Grupo:
     @classmethod
     def asignarNombre(cls, nombre="Grado 10"):
         cls.grado = nombre
+
 
 if __name__ == "__main__":
     Asignatura1 = Asignatura("Matematicas")
