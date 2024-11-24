@@ -26,31 +26,3 @@ class Grupo:
     @classmethod
     def asignarNombre(cls, nombre="Grado 10"):
         cls.grado = nombre
-
-
-if __name__ == "__main__":
-    Asignatura1 = Asignatura("Matematicas")
-    print(Asignatura1)
-
-    grupo = Grupo(estudiantes=[], grupo="grupo predeterminado")
-    print(grupo)
-
-    Grupo.asignarNombre("Grado 12")
-    print(Grupo.grado)
-
-    grupo.agregarAlumno("Kelly")
-    print(grupo.listadoAlumnos)
-
-    grupo.agregarAlumno("Jaime", ["Pedro", "Santiago"])
-    print(grupo.listadoAlumnos)
-
-    grupo.agregarAlumno("Javier")
-    print(grupo.listadoAlumnos)
-
-    print(len(grupo.listadoAlumnos))
-
-    Grupo.asignarNombre("Grado 1")
-    print(Grupo.grado)
-
-    Grupo.asignarNombre("Grado 6")
-    print(Grupo.grado)
