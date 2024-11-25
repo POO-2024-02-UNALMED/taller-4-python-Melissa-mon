@@ -1,3 +1,4 @@
+# Clase Asignatura
 class Asignatura:
 
     def _init_(self, nombre, salon="remoto"):
