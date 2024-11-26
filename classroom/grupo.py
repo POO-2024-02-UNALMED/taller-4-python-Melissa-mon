@@ -1,7 +1,8 @@
 from classroom.asignatura import Asignatura
 
+
 class Grupo:
-    grado = "Grado 12"  # Valor por defecto
+    grado = "Grado 12"
 
     def _init_(self, grupo="grupo predeterminado", asignaturas=None, estudiantes=None):
         self._grupo = grupo
@@ -15,12 +16,13 @@ class Grupo:
     def agregarAlumno(self, alumno, lista=None):
         if lista is None:
             lista = []
-        lista.append(alumno)
-        self.listadoAlumnos += lista
+        listaI = []
+        listaI.append(alumno)
+        self.listadoAlumnos += lista + listaI
 
     def _str_(self):
-        return f"Grupo de estudiantes: {self._grupo}"
+        return "Grupo de estudiantes: " + self._grupo
 
-    @classmethod
+    @ classmethod
     def asignarNombre(cls, nombre="Grado 6"):
         cls.grado = nombre
